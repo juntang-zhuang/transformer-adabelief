@@ -28,4 +28,4 @@ I'm not sure what causes this, and I'm still investigating it.
 My guess is the denominator st = EMA(sqrt( (gt-mt)^2 )) is too small with higher version PyTorch. It could be either the old version has 
 random error in gradient estimation, so st is not so small; or the new version rounds grad to similiar values, hence (gt-mt)^2 is close to 0.
 
-If you have any idea or suggestion, that would be really really helpful.
+If you have any idea or suggestion, please leave a message here, that would be really really helpful.
