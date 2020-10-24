@@ -24,8 +24,6 @@ The result could vary with rnadomness, however they are all above 35.
 When I tested AdaBelief in PyTorch 1.4 and PyTorch 1.6, the BLEU score is always below 30. 
 Furthremore, the gradient norm in PyTorch 1.1 is always below 1.0, while with higher version PyTorch the grad explodes to 2 or more.
 
-I'm not sure what causes this, and I'm still investigating it.
-My guess is the denominator st = EMA(sqrt( (gt-mt)^2 )) is too small with higher version PyTorch. It could be either the old version has 
-random error in gradient estimation, so st is not so small; or the new version rounds grad to similiar values, hence (gt-mt)^2 is close to 0.
-
-If you have any idea or suggestion, please leave a message here, that would be really really helpful.
+This seems to be a problem of the version incompatibility between ```fairseq``` here (<=0.8) and ```PyTorch```.<br>
+The code here works fine with PyTorch 1.1.<br>
+When using PyTorch 1.6, AdaBelief (same code as here) works fine with latest ```fairseq``` implementation.<br>
