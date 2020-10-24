@@ -20,7 +20,7 @@ The BLEU score on my local machine (PyTorch 1.1, CUDA 9.0) is roughly:
 AdamW: 35.60         RAdam: 35.51     AdaBelief: 35.85
 The result could vary with rnadomness, however they are all above 35.
 
-# Problem with PyTorch version
+# Incompatibility between fairseq implementation here and new version PyTorch
 When I tested AdaBelief in PyTorch 1.4 and PyTorch 1.6, the BLEU score is always below 30. 
 Furthremore, the gradient norm in PyTorch 1.1 is always below 1.0, while with higher version PyTorch the grad explodes to 2 or more.
 
