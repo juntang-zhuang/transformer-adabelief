@@ -27,3 +27,4 @@ Furthremore, the gradient norm in PyTorch 1.1 is always below 1.0, while with hi
 This seems to be a problem of the version incompatibility between ```fairseq``` here (<=0.8) and ```PyTorch```.<br>
 The code here works fine with PyTorch 1.1.<br>
 When using PyTorch 1.6, AdaBelief (same code as here) works fine with latest ```fairseq``` implementation.<br>
+Code for transformer to work with PyTorch 1.1 is at https://github.com/juntang-zhuang/fairseq-adabelief
